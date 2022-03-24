@@ -6,9 +6,10 @@ image:
   tag: latest
 
 args:
-  numOfCopies: "2"
+  #numOfCopies: "2"
   threads: "1000"
   rpc: "200"
+  #debug: "--debug"
 
 resources: {}
 # limits:
