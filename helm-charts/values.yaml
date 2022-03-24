@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 7
 
 image:
   repository: ghcr.io/aruiem234/auto_mhddos
@@ -6,18 +6,17 @@ image:
   tag: latest
 
 args:
-  #numOfCopies: "2"
   threads: "1000"
   rpc: "200"
   #debug: "--debug"
 
-resources: {}
-# limits:
-#   cpu: 1
-#   memory: 2Gi
-# requests:
-#   cpu: 300m
-#   memory: 128Mi
+resources:
+ limits:
+   cpu: 1
+   memory: 2Gi
+ requests:
+   cpu: 300m
+   memory: 128Mi
 
 imagePullSecrets: []
 nameOverride: ""

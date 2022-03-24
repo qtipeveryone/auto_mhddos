@@ -31,9 +31,10 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args:
             [
-            "{{ .Values.args.numOfCopies }}",
             "{{ .Values.args.threads }}",
-            "{{ .Values.args.rpc }}"]
+            "{{ .Values.args.rpc }}",
+            "{{ .Values.args.debug }}"
+            ]
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
